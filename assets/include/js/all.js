@@ -4,9 +4,9 @@
 /* ---------------------------------------------
  Scripts initialization
  --------------------------------------------- */
-//$(window).on("load", function () {
-//  windowLoad()
-//});
+$(window).on("load", function () {
+  windowLoad()
+});
 
 function windowResize() {
   init_classic_menu_resize();
@@ -43,13 +43,13 @@ function windowReady() {
   init_loader();
 }
 
-//$(document).ready(function () {
-//  windowReady();
-//});
+$(document).ready(function () {
+  windowReady();
+});
 
-//$(window).resize(function () {
-//  windowResize()
-//});
+$(window).resize(function () {
+  windowResize()
+});
 
 
 /* --------------------------------------------
@@ -165,25 +165,23 @@ function init_classic_menu() {
   });
 
   // Mobile menu toggle
+  //mobile_nav.click(function () {
 
-  mobile_nav.click(function () {
-
-    if (desktop_nav.hasClass("js-opened")) {
-      desktop_nav.slideUp("slow", "easeOutExpo").removeClass("js-opened");
-      $(this).removeClass("active");
-      $(this).attr("aria-expanded", "false");
-    }
-    else {
-      desktop_nav.slideDown("slow", "easeOutQuart").addClass("js-opened");
-      $(this).addClass("active");
-      $(this).attr("aria-expanded", "true");
-      // Fix for responsive menu
-      if ($(".main-nav").hasClass("not-top")) {
-        $(window).scrollTo(".main-nav", "slow");
-      }
-    }
-
-  });
+  //  if (desktop_nav.hasClass("js-opened")) {
+  //    desktop_nav.slideUp("slow", "easeOutExpo").removeClass("js-opened");
+  //    $(this).removeClass("active");
+  //    $(this).attr("aria-expanded", "false");
+  //  }
+  //  else {
+  //    desktop_nav.slideDown("slow", "easeOutQuart").addClass("js-opened");
+  //    $(this).addClass("active");
+  //    $(this).attr("aria-expanded", "true");
+  //    // Fix for responsive menu
+  //    if ($(".main-nav").hasClass("not-top")) {
+  //      $(window).scrollTo(".main-nav", "slow");
+  //    }
+  //  }
+  //});
 
   $(document).on("click", function (event) {
     if ($(window).width() <= 1024) {
